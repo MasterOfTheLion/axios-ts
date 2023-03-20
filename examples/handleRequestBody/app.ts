@@ -1,10 +1,13 @@
-import dispatchRequest from "../../src/core/dispatchRequest";
+import axios from '../../src/index'
 
-dispatchRequest({
-  method: "post",
-  url: "/api/handleRequestBody/post",
+axios({
+  method: 'post',
+  url: '/api/handleRequestBody/post',
+  headers: {
+    'content-type': 'application/json;charset=utf-8',
+  },
   data: {
     a: 1,
-    b: 2
-  }
-});
+    b: 2,
+  },
+})
